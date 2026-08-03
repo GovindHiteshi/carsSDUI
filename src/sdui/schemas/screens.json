@@ -1,0 +1,377 @@
+{
+  "home": {
+    "type": "screen",
+    "id": "home",
+    "schemaVersion": 1,
+    "props": {
+      "scroll": true,
+      "background": "background",
+      "footer": {
+        "type": "bottomNav",
+        "id": "bottom-nav",
+        "children": [
+          {
+            "type": "navItem",
+            "id": "home",
+            "props": { "label": "Home", "icon": "🏠" },
+            "action": { "kind": "select", "group": "bottomNav", "value": "home" }
+          },
+          {
+            "type": "navItem",
+            "id": "explore",
+            "props": { "label": "Explore", "icon": "🧭" },
+            "action": { "kind": "select", "group": "bottomNav", "value": "explore" }
+          },
+          {
+            "type": "navItem",
+            "id": "my-cars",
+            "props": { "label": "My Cars", "icon": "🚗" },
+            "action": { "kind": "select", "group": "bottomNav", "value": "my-cars" }
+          },
+          {
+            "type": "navItem",
+            "id": "showrooms",
+            "props": { "label": "Showrooms", "icon": "🏬" },
+            "action": { "kind": "select", "group": "bottomNav", "value": "showrooms" }
+          },
+          {
+            "type": "navItem",
+            "id": "activities",
+            "props": { "label": "Activities", "icon": "📋" },
+            "action": { "kind": "select", "group": "bottomNav", "value": "activities" }
+          }
+        ]
+      }
+    },
+    "children": [
+      {
+        "type": "searchHeader",
+        "id": "header",
+        "props": { "placeholder": "Search Mahindra cars", "icon": "🔍" },
+        "action": { "kind": "navigate", "to": "search" },
+        "children": [
+          {
+            "type": "topTabs",
+            "id": "top-tabs",
+            "children": [
+              {
+                "type": "topTab",
+                "id": "all",
+                "props": { "label": "All", "icon": "▦" },
+                "action": { "kind": "select", "group": "topNav", "value": "all" }
+              },
+              {
+                "type": "topTab",
+                "id": "buy-used",
+                "props": { "label": "Buy used car", "icon": "🚗" },
+                "action": { "kind": "select", "group": "topNav", "value": "buy-used" }
+              },
+              {
+                "type": "topTab",
+                "id": "sell",
+                "props": { "label": "Sell car", "icon": "🏷️" },
+                "action": { "kind": "select", "group": "topNav", "value": "sell" }
+              },
+              {
+                "type": "topTab",
+                "id": "loans",
+                "props": { "label": "Loans", "icon": "₹" },
+                "action": { "kind": "select", "group": "topNav", "value": "loans" }
+              },
+              {
+                "type": "topTab",
+                "id": "challan",
+                "props": { "label": "Challan", "icon": "🔎" },
+                "action": { "kind": "select", "group": "topNav", "value": "challan" }
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "type": "section",
+        "id": "buy-car",
+        "props": { "title": "Buy car", "offer": "Up to ₹90,000 off", "spacing": 18 },
+        "children": [
+          {
+            "type": "carousel",
+            "id": "buy-rail",
+            "props": { "gap": 10 },
+            "children": [
+              {
+                "type": "categoryCard",
+                "id": "all-used-cars",
+                "props": {
+                  "title": "All used cars",
+                  "fill": "cardNavy",
+                  "media": { "glyph": "🚙", "tint": "#2C3A90" }
+                },
+                "action": { "kind": "navigate", "to": "search" }
+              },
+              {
+                "type": "categoryCard",
+                "id": "budget-used-cars",
+                "props": {
+                  "title": "Budget used cars",
+                  "fill": "cardNavy",
+                  "media": { "glyph": "🚗", "tint": "#2C3A90" }
+                },
+                "action": { "kind": "navigate", "to": "search" }
+              },
+              {
+                "type": "categoryCard",
+                "id": "premium-used-cars",
+                "props": {
+                  "title": "Premium used cars",
+                  "fill": "cardNavy",
+                  "media": { "glyph": "🚕", "tint": "#2C3A90" }
+                },
+                "action": { "kind": "navigate", "to": "search" }
+              },
+              {
+                "type": "categoryCard",
+                "id": "new-cars",
+                "props": {
+                  "title": "New cars",
+                  "fill": "cardNavy",
+                  "media": { "glyph": "🚘", "tint": "#2C3A90" }
+                },
+                "action": { "kind": "navigate", "to": "search" }
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "type": "section",
+        "id": "sell-car",
+        "props": { "title": "Sell your car", "spacing": 20 },
+        "children": [
+          {
+            "type": "carousel",
+            "id": "sell-rail",
+            "props": { "gap": 10 },
+            "children": [
+              {
+                "type": "categoryCard",
+                "id": "sell-your-car",
+                "props": {
+                  "title": "Sell your car",
+                  "fill": "cardGreen",
+                  "media": { "glyph": "🤝", "tint": "#1B7A5D" }
+                },
+                "action": { "kind": "navigate", "to": "sell" }
+              },
+              {
+                "type": "categoryCard",
+                "id": "car-valuation",
+                "props": {
+                  "title": "Check car valuation",
+                  "fill": "cardGreen",
+                  "media": { "glyph": "💰", "tint": "#1B7A5D" }
+                },
+                "action": { "kind": "navigate", "to": "valuation" }
+              },
+              {
+                "type": "categoryCard",
+                "id": "scrap-car",
+                "props": {
+                  "title": "Scrap your car",
+                  "fill": "cardGreen",
+                  "media": { "glyph": "🔩", "tint": "#1B7A5D" }
+                },
+                "action": { "kind": "navigate", "to": "scrap" }
+              },
+              {
+                "type": "categoryCard",
+                "id": "exchange-car",
+                "props": {
+                  "title": "Exchange your car",
+                  "fill": "cardGreen",
+                  "media": { "glyph": "🔁", "tint": "#1B7A5D" }
+                },
+                "action": { "kind": "navigate", "to": "exchange" }
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "type": "section",
+        "id": "loans",
+        "props": { "title": "Get loans", "spacing": 20 },
+        "children": [
+          {
+            "type": "carousel",
+            "id": "loans-rail",
+            "props": { "gap": 14 },
+            "children": [
+              {
+                "type": "circleCard",
+                "id": "used-car-loan",
+                "props": {
+                  "title": "Used car loan",
+                  "badge": "Best seller",
+                  "media": { "glyph": "🚙", "tint": "#DCE2F7" }
+                },
+                "action": { "kind": "navigate", "to": "loan-used" }
+              },
+              {
+                "type": "circleCard",
+                "id": "personal-loan",
+                "props": {
+                  "title": "Personal loan",
+                  "media": { "glyph": "💵", "tint": "#E6E0F5" }
+                },
+                "action": { "kind": "navigate", "to": "loan-personal" }
+              },
+              {
+                "type": "circleCard",
+                "id": "loan-against-car",
+                "props": {
+                  "title": "Loan against car",
+                  "badge": "New",
+                  "media": { "glyph": "🚗", "tint": "#D9EDE4" }
+                },
+                "action": { "kind": "navigate", "to": "loan-against-car" }
+              },
+              {
+                "type": "circleCard",
+                "id": "car-insurance",
+                "props": {
+                  "title": "Car insurance",
+                  "media": { "glyph": "🛡️", "tint": "#FBE6D6" }
+                },
+                "action": { "kind": "navigate", "to": "insurance" }
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "type": "section",
+        "id": "car-check",
+        "props": { "title": "Car check services", "spacing": 20 },
+        "children": [
+          {
+            "type": "grid",
+            "id": "car-check-grid",
+            "props": { "gap": 10 },
+            "children": [
+              {
+                "type": "serviceTile",
+                "id": "new-car-pdi",
+                "props": {
+                  "label": "New car PDI",
+                  "columns": 3,
+                  "media": { "glyph": "🔧", "tint": "#E3E8F6" }
+                },
+                "action": { "kind": "navigate", "to": "pdi" }
+              },
+              {
+                "type": "serviceTile",
+                "id": "used-car-check",
+                "props": {
+                  "label": "Used car check",
+                  "columns": 3,
+                  "media": { "glyph": "🚗", "tint": "#E3E8F6" }
+                },
+                "action": { "kind": "navigate", "to": "used-car-check" }
+              },
+              {
+                "type": "serviceTile",
+                "id": "vehicle-history",
+                "props": {
+                  "label": "Vehicle history",
+                  "columns": 3,
+                  "media": { "glyph": "🛡️", "tint": "#FDF0D2" }
+                },
+                "action": { "kind": "navigate", "to": "vehicle-history" }
+              },
+              {
+                "type": "serviceTile",
+                "id": "check-challan",
+                "props": {
+                  "label": "Check challan",
+                  "columns": 3,
+                  "media": { "glyph": "🚦", "tint": "#F7E0E0" }
+                },
+                "action": { "kind": "navigate", "to": "challan" }
+              },
+              {
+                "type": "serviceTile",
+                "id": "check-car-price",
+                "props": {
+                  "label": "Check car price",
+                  "columns": 3,
+                  "media": { "glyph": "📈", "tint": "#DFF0E6" }
+                },
+                "action": { "kind": "navigate", "to": "car-price" }
+              },
+              {
+                "type": "serviceTile",
+                "id": "odometer-check",
+                "props": {
+                  "label": "Odometer check",
+                  "columns": 3,
+                  "media": { "glyph": "⏱️", "tint": "#EAE4F7" }
+                },
+                "action": { "kind": "navigate", "to": "odometer" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "search": {
+    "type": "screen",
+    "id": "search",
+    "schemaVersion": 1,
+    "props": { "scroll": true },
+    "children": [
+      {
+        "type": "searchHeader",
+        "id": "search-header",
+        "props": { "placeholder": "Search by brand or model", "icon": "🔍" }
+      },
+      {
+        "type": "section",
+        "id": "popular",
+        "props": { "title": "Popular searches", "spacing": 18 },
+        "children": [
+          {
+            "type": "grid",
+            "id": "popular-grid",
+            "props": { "gap": 10 },
+            "children": [
+              {
+                "type": "serviceTile",
+                "id": "s-mahindra",
+                "props": { "label": "Mahindra", "columns": 3, "media": { "glyph": "🚙" } },
+                "action": { "kind": "track", "event": "search_brand", "params": { "brand": "mahindra" } }
+              },
+              {
+                "type": "serviceTile",
+                "id": "s-maruti",
+                "props": { "label": "Maruti", "columns": 3, "media": { "glyph": "🚗" } },
+                "action": { "kind": "track", "event": "search_brand", "params": { "brand": "maruti" } }
+              },
+              {
+                "type": "serviceTile",
+                "id": "s-tata",
+                "props": { "label": "Tata", "columns": 3, "media": { "glyph": "🚐" } },
+                "action": { "kind": "track", "event": "search_brand", "params": { "brand": "tata" } }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

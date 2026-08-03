@@ -1,45 +1,23 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * Server-driven UI shell.
+ *
+ * The app no longer contains any screen layout. Everything below the provider
+ * is described by a JSON payload (today from src/sdui/schemas/screens.json,
+ * tomorrow from an API — see src/sdui/source.ts).
  *
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SduiApp } from './src/sdui/SduiApp';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
+      <SduiApp initialScreen="home" />
     </SafeAreaProvider>
   );
 }
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;
